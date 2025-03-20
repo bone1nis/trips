@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Планируйте и отслеживайте свои поездки с удобным списком маршрутов, дат и статусов.">
+    <meta name="keywords" content="поездки, маршруты, путешествия, планирование поездок, билеты, бронирование">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>Мои поездки</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav class="header__nav">
+                <a href="#" class="header__nav-link">Поездки</a>
+            </nav>
+            <div class="header__toolbar">
+                <a href="#" class="header__toolbar-item">
+                    <span class="header__toolbar-item-title">Заболоцкий К.О</span>
+                    <img src="./resources/auth-icon.png" alt="Выйти из аккаунта" class="header__toolbar-item-icon"
+                        width="12" height="10">
+                </a>
+            </div>
+        </header>
+        <main>
+            <div class="trips-panel">
+                <div class="trips-panel__header">
+                    <h4 class="trips-panel__title">Мои поездки</h4>
+                    <button class="trips-panel__button">Оформить поездку</button>
+                </div>
+                <nav class="trips-panel__nav">
+                    <div class="trips-panel__filters">
+                        <div class="trips-panel__periods">
+                            <label for="trip-start" class="trips-panel__label">
+                                Период с:
+                                <div class="trips-panel__input-wrapper">
+                                    <input type="text" class="trips-panel__input trips-panel__input_start"
+                                        id="trip-start" placeholder="Выбрать...">
+                                    <img src="./resources/remove-icon.png" alt="Удалить дату"
+                                        class="trips-panel__remove-icon" width="13" height="13">
+                                    <img src="./resources/calendar-icon.png" alt="Выбрать дату"
+                                        class="trips-panel__calendar-icon" width="16" height="16">
+                                </div>
+                            </label>
+                            <label for="trip-end" class="trips-panel__label">
+                                по:
+                                <div class="trips-panel__input-wrapper">
+                                    <input type="text" class="trips-panel__input trips-panel__input_end" id="trip-end"
+                                        placeholder="Выбрать...">
+                                    <img src="./resources/calendar-icon.png" alt="Выбрать дату"
+                                        class="trips-panel__calendar-icon" width="16" height="16">
+                                </div>
+                            </label>
+                        </div>
+                        <div class="trips-panel__search-wrapper">
+                            <input type="text" class=" trips-panel__input trips-panel__search" placeholder="Поиск...">
+                        </div>
+                        <span href="#" class="trips-panel__reset">
+                            <img src="./resources/reset-icon.png" alt="Сбросить все" class="trips-panel__reset-icon"
+                                width="10" height="10">
+                            <span class="trips-panel__reset-text">Сбросить все</span>
+                        </span>
+                    </div>
+                    <label for="last-trips" class="trips-panel__checkbox">
+                        <input type="checkbox" id="last-trips" class="trips-panel__checkbox-input">
+                        <span class="trips-panel__checkbox-text">Показать прошедшие поездки</span>
+                    </label>
+                </nav>
+            </div>
+            <div class="progress">
+                <div class="progress__bar">
+                    <div class="progress__fill"></div>
+                </div>
+            </div>
+            <div class="trips-list">
+                <div class="trips-list__item">
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">№ поездки</h6>
+                        <span class="trips-list__value trips-list__value_number"> 000074</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Дата поездки</h6>
+                        <span class="trips-list__value">22.02.2024 - 27.02.2024</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, план</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, факт</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Город</h6>
+                        <div class="trips-list__value">
+                            <span>Москва, Ярославль, Ижевск, Владимир</span>
+                        </div>
+                    </div>
+                    <div class="trips-list__column trips-list__column_status">
+                        <div class="trips-list__wrapper">
+                            <h6 class="trips-list__label">Статус</h6>
+                            <span class="trips-list__value trips-list__value_status">Документы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips-list__item">
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">№ поездки</h6>
+                        <span class="trips-list__value trips-list__value_number">000115</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Дата поездки</h6>
+                        <span class="trips-list__value">22.02.2024 - 27.02.2024</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, план</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, факт</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Город</h6>
+                        <div class="trips-list__value trips-list__value_more">
+                            <span>Кременчуг-Константиновское, Петропавловск-Камчатский,
+                                Новосибирск, Волго...</span>
+                            <img src="./resources/more-icon.png" alt="Все города" class="trips-list__more-icon"
+                                width="16" height="16">
+                            <div class="trips-list__cities-container">
+                                Кременчуг-Константиновское,
+                                Петропавловск-Камчатский,
+                                Новосибирск, Волгоград, Саратов
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trips-list__column trips-list__column_status">
+                        <div class="trips-list__wrapper">
+                            <h6 class="trips-list__label">Статус</h6>
+                            <span class="trips-list__value trips-list__value_status">Документы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips-list__item">
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">№ поездки</h6>
+                        <span class="trips-list__value trips-list__value_number">000115</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Дата поездки</h6>
+                        <span class="trips-list__value">22.02.2024 - 27.02.2024</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, план</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, факт</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Город</h6>
+                        <div class="trips-list__value">
+                            <span>Москва</span>
+                        </div>
+                    </div>
+                    <div class="trips-list__column trips-list__column_status">
+                        <div class="trips-list__wrapper">
+                            <h6 class="trips-list__label">Статус</h6>
+                            <span class="trips-list__value trips-list__value_status">Документы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips-list__item">
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">№ поездки</h6>
+                        <span class="trips-list__value trips-list__value_number"> 000074</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Дата поездки</h6>
+                        <span class="trips-list__value">22.02.2024 - 27.02.2024</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, план</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, факт</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Город</h6>
+                        <div class="trips-list__value">
+                            <span>Москва, Ярославль, Ижевск, Владимир</span>
+                        </div>
+                    </div>
+                    <div class="trips-list__column trips-list__column_status">
+                        <div class="trips-list__wrapper">
+                            <h6 class="trips-list__label">Статус</h6>
+                            <span class="trips-list__value trips-list__value_status">Документы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips-list__item">
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">№ поездки</h6>
+                        <span class="trips-list__value trips-list__value_number"> 000074</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Дата поездки</h6>
+                        <span class="trips-list__value">22.02.2024 - 27.02.2024</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, план</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, факт</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Город</h6>
+                        <div class="trips-list__value">
+                            <span>Москва, Ярославль, Ижевск, Владимир</span>
+                        </div>
+                    </div>
+                    <div class="trips-list__column trips-list__column_status">
+                        <div class="trips-list__wrapper">
+                            <h6 class="trips-list__label">Статус</h6>
+                            <span class="trips-list__value trips-list__value_status">Документы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips-list__item">
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">№ поездки</h6>
+                        <span class="trips-list__value trips-list__value_number"> 000074</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Дата поездки</h6>
+                        <span class="trips-list__value">22.02.2024 - 27.02.2024</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, план</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, факт</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Город</h6>
+                        <div class="trips-list__value">
+                            <span>Москва, Ярославль, Ижевск, Владимир</span>
+                        </div>
+                    </div>
+                    <div class="trips-list__column trips-list__column_status">
+                        <div class="trips-list__wrapper">
+                            <h6 class="trips-list__label">Статус</h6>
+                            <span class="trips-list__value trips-list__value_status">Документы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips-list__item">
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">№ поездки</h6>
+                        <span class="trips-list__value trips-list__value_number"> 000074</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Дата поездки</h6>
+                        <span class="trips-list__value">22.02.2024 - 27.02.2024</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, план</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, факт</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Город</h6>
+                        <div class="trips-list__value">
+                            <span>Москва, Ярославль, Ижевск, Владимир</span>
+                        </div>
+                    </div>
+                    <div class="trips-list__column trips-list__column_status">
+                        <div class="trips-list__wrapper">
+                            <h6 class="trips-list__label">Статус</h6>
+                            <span class="trips-list__value trips-list__value_status">Документы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips-list__item">
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">№ поездки</h6>
+                        <span class="trips-list__value trips-list__value_number"> 000074</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Дата поездки</h6>
+                        <span class="trips-list__value">22.02.2024 - 27.02.2024</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, план</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, факт</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Город</h6>
+                        <div class="trips-list__value">
+                            <span>Москва, Ярославль, Ижевск, Владимир</span>
+                        </div>
+                    </div>
+                    <div class="trips-list__column trips-list__column_status">
+                        <div class="trips-list__wrapper">
+                            <h6 class="trips-list__label">Статус</h6>
+                            <span class="trips-list__value trips-list__value_status">Документы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips-list__item">
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">№ поездки</h6>
+                        <span class="trips-list__value trips-list__value_number"> 000074</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Дата поездки</h6>
+                        <span class="trips-list__value">22.02.2024 - 27.02.2024</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, план</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, факт</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Город</h6>
+                        <div class="trips-list__value">
+                            <span>Москва, Ярославль, Ижевск, Владимир</span>
+                        </div>
+                    </div>
+                    <div class="trips-list__column trips-list__column_status">
+                        <div class="trips-list__wrapper">
+                            <h6 class="trips-list__label">Статус</h6>
+                            <span class="trips-list__value trips-list__value_status">Документы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips-list__item">
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">№ поездки</h6>
+                        <span class="trips-list__value trips-list__value_number"> 000074</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Дата поездки</h6>
+                        <span class="trips-list__value">22.02.2024 - 27.02.2024</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, план</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, факт</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Город</h6>
+                        <div class="trips-list__value">
+                            <span>Москва, Ярославль, Ижевск, Владимир</span>
+                        </div>
+                    </div>
+                    <div class="trips-list__column trips-list__column_status">
+                        <div class="trips-list__wrapper">
+                            <h6 class="trips-list__label">Статус</h6>
+                            <span class="trips-list__value trips-list__value_status">Документы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips-list__item">
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">№ поездки</h6>
+                        <span class="trips-list__value trips-list__value_number"> 000074</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Дата поездки</h6>
+                        <span class="trips-list__value">22.02.2024 - 27.02.2024</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, план</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, факт</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Город</h6>
+                        <div class="trips-list__value">
+                            <span>Москва, Ярославль, Ижевск, Владимир</span>
+                        </div>
+                    </div>
+                    <div class="trips-list__column trips-list__column_status">
+                        <div class="trips-list__wrapper">
+                            <h6 class="trips-list__label">Статус</h6>
+                            <span class="trips-list__value trips-list__value_status">Документы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips-list__item">
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">№ поездки</h6>
+                        <span class="trips-list__value trips-list__value_number"> 000074</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Дата поездки</h6>
+                        <span class="trips-list__value">22.02.2024 - 27.02.2024</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, план</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, факт</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Город</h6>
+                        <div class="trips-list__value">
+                            <span>Москва, Ярославль, Ижевск, Владимир</span>
+                        </div>
+                    </div>
+                    <div class="trips-list__column trips-list__column_status">
+                        <div class="trips-list__wrapper">
+                            <h6 class="trips-list__label">Статус</h6>
+                            <span class="trips-list__value trips-list__value_status">Документы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips-list__item">
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">№ поездки</h6>
+                        <span class="trips-list__value trips-list__value_number"> 000074</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Дата поездки</h6>
+                        <span class="trips-list__value">22.02.2024 - 27.02.2024</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, план</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Сумма, факт</h6>
+                        <span class="trips-list__value">29 400,00</span>
+                    </div>
+                    <div class="trips-list__column">
+                        <h6 class="trips-list__label">Город</h6>
+                        <div class="trips-list__value">
+                            <span>Москва, Ярославль, Ижевск, Владимир</span>
+                        </div>
+                    </div>
+                    <div class="trips-list__column trips-list__column_status">
+                        <div class="trips-list__wrapper">
+                            <h6 class="trips-list__label">Статус</h6>
+                            <span class="trips-list__value trips-list__value_status">Документы</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 171%;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 0 16px;
+    background-color: #f6fcff;
+}
+
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.12);
+    padding: 0 16px;
+}
+
+.header__nav {
+    margin-left: 20%;
+}
+
+.header__nav-link {
+    height: 100%;
+    font-weight: 600;
+    color: #252c32;
+    display: inline-block;
+    padding: 19.5px 12px;
+    border-bottom: 1px solid #4094f7;
+}
+
+.header__toolbar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__toolbar-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px dashed rgba(64, 148, 247, 0.2);
+}
+
+.header__toolbar-item-title {
+    color: #0e73f6;
+}
+
+.progress {
+    margin: 7px 0;
+    width: 100%;
+    height: 2px;
+}
+
+.progress__bar {
+    width: 100%;
+    height: 2px;
+    background-color: #d7edff;
+    border-radius: 2px 0 0 2px;
+}
+
+.progress__fill {
+    background-color: #4094f7;
+    height: 100%;
+    width: 360px;
+}
+
+.trips-panel__header {
+    padding: 10px 16px 6px 16px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background-color: #fff;
+}
+
+.trips-panel__title {
+    color: #252c32;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.trips-panel__button {
+    cursor: pointer;
+    border-radius: 4px;
+    width: 178px;
+    height: 24px;
+    padding: 0 8px 0 35px;
+    font-weight: 600;
+    color: #f6f8f9;
+    background: #4094f7;
+    background-image: url(./resources/add-icon.png);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+}
+
+.trips-panel__nav {
+    padding: 8px 16px;
+    background: #f6fcff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trips-panel__filters {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.trips-panel__periods {
+    display: flex;
+    gap: 16px;
+}
+
+.trips-panel__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trips-panel__input {
+    border: 1px solid #dde2e4;
+    border-radius: 6px;
+    padding: 4px 12px;
+    width: 180px;
+    height: 32px;
+}
+
+.trips-panel__input_start {
+    padding: 4px 48px 4px 12px;
+}
+
+.trips-panel__input_end {
+    padding: 4px 30px 4px 12px;
+}
+
+.trips-panel__input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.trips-panel__calendar-icon {
+    position: absolute;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.trips-panel__remove-icon {
+    position: absolute;
+    right: 34px;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+}
+
+.trips-panel__search {
+    padding: 4px 30px 4px 12px;
+    width: 260px;
+}
+
+.trips-panel__search-wrapper {
+    position: relative;
+    width: 260px;
+}
+
+.trips-panel__search-wrapper::before {
+    content: "";
+    background-image: url(./resources/glass-icon.png);
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    height: 16px;
+    width: 16px;
+}
+
+.trips-panel__reset {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(64, 148, 247, 0.2);
+}
+
+.trips-panel__reset-text {
+    color: #0e73f6;
+}
+
+.trips-panel__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trips-panel__checkbox-input {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.trips-panel__checkbox-text {
+    color: #252c32;
+}
+
+.trips-list {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.trips-list__item {
+    border-radius: 6px;
+    padding: 16px 16px 16px 24px;
+    height: 80px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 5% 15% 5% 5% 50% 12%;
+    gap: 28px;
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.trips-list__item:hover {
+    border: 1px solid #9bcffd;
+    border-radius: 6px;
+}
+
+.trips-list__item:hover .trips-list__value_number {
+    border-bottom: none;
+}
+
+.trips-list__column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.trips-list__column_status {
+    align-items: end;
+}
+
+.trips-list__label {
+    font-weight: normal;
+    font-size: 12px;
+    color: #84919a;
+}
+
+.trips-list__value {
+    width: max-content;
+    color: #252c32;
+}
+
+.trips-list__value_number {
+    cursor: pointer;
+    color: #0e73f6;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(64, 148, 247, 0.2);
+}
+
+.trips-list__value_status {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 133%;
+    background: #eef0f2;
+    color: #5b6871;
+}
+
+.trips-list__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trips-list__more-icon {
+    cursor: pointer;
+    position: relative;
+}
+
+.trips-list__value_more {
+    position: relative;
+}
+
+.trips-list__cities-container {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: -33%;
+    top: -65px;
+    width: 220px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 133%;
+    color: #f6f8f9;
+    background: #303940;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-5px);
+}
+
+.trips-list__cities-container::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 17px;
+    width: 10px;
+    height: 6px;
+    transform: translateX(-50%);
+    clip-path: polygon(50% 100%, 100% 0, 0 0);
+    background: #303940;
+}
+
+.trips-list__more-icon:hover+.trips-list__cities-container {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
